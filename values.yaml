@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: harbor.kuberix.co.kr/vdc/phs/spring-sample
+  repository: ghcr.io/k-gustjd887]/multicampus-spring
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -47,7 +47,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: phs.kuberix.co.kr
+    - host: *
       paths:
         - path: /
           pathType: ImplementationSpecific
