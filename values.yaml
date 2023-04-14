@@ -42,12 +42,13 @@ service:
 
 ingress:
   enabled: true
-  className: ""
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - paths:
+    - host: nginx.mysvc.com
+      paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
